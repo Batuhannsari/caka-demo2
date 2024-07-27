@@ -3,7 +3,7 @@ import frame2 from "../../public/Frame2.png";
 import frame3 from "../../public/Frame3.png";
 import frame4 from "../../public/Frame4.png";
 
-export const products = [
+const products = [
   {
     title: "Moonbeam",
     link: "https://gomoonbeam.com",
@@ -80,3 +80,5 @@ export const products = [
     thumbnail: "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
   },
 ];
+
+export default products;
