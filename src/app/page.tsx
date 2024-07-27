@@ -5,7 +5,7 @@ import frame3 from "../../public/Frame3.png";
 import frame4 from "../../public/Frame4.png";
 import { HeroParallax } from "./ui/hero-parallax";
 
-export const Home: React.FC<any> = (props) => {
+const Home: React.FC<any> = (props) => {
 
   return (
     <>
@@ -103,3 +103,5 @@ export const products: any = [
       "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
   },
 ];
+
+export default Home;
