@@ -122,12 +122,16 @@ export const ProductCard = ({
         <motion.div
             style={{
                 x: translate,
+                height: 'calc(100vh / 3)',
+                width: 'calc((100vh / 3) * (16 / 9))', // maintaining 16:9 aspect ratio
+                maxHeight: '315px',
+                maxWidth: '560px'
             }}
             whileHover={{
                 y: -20,
             }}
             key={product.title}
-            className="group/product h-[30vw] w-[50vw] max-h-[315px] max-w-[560px] sm:h-[40vw] sm:w-[70vw] md:h-[25vw] md:w-[40vw] lg:h-[20vw] lg:w-[30vw] relative flex-shrink-0"
+            className="group/product relative flex-shrink-0"
         >
             <Link
                 href={product.link}
