@@ -5,8 +5,15 @@ import frame3 from "../../public/Frame3.png";
 import frame4 from "../../public/Frame4.png";
 import { HeroParallax } from "./ui/hero-parallax";
 
-// Define products array within the component file or import it from another file
-const products = [
+const Home = () => {
+
+  return (
+    <>
+      <HeroParallax products={products} />
+    </>
+  )
+}
+export const products: any = [
   {
     title: "Moonbeam",
     link: "https://gomoonbeam.com",
@@ -22,6 +29,7 @@ const products = [
     link: "https://userogue.com",
     thumbnail: frame3,
   },
+
   {
     title: "Editorially",
     link: "https://editorially.org",
@@ -38,6 +46,7 @@ const products = [
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
   },
+
   {
     title: "Algochurn",
     link: "https://algochurn.com",
@@ -68,6 +77,7 @@ const products = [
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
   },
+
   {
     title: "Creme Digital",
     link: "https://cremedigital.com",
@@ -94,8 +104,4 @@ const products = [
   },
 ];
 
-export default function Home() {
-  return (
-    <HeroParallax products={products} />
-  );
-}
+export default Home;
