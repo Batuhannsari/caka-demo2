@@ -58,7 +58,7 @@ export const HeroParallax = ({
     return (
         <div
             ref={ref}
-            className="h-[184.5vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+            className="h-[179vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
         >
             <Header />
             <motion.div
@@ -70,7 +70,7 @@ export const HeroParallax = ({
                 }}
                 className=""
             >
-                <motion.div className="flex flex-row-reverse w-[45%] space-x-reverse space-x-8 mb-8">
+                <motion.div className="flex flex-row-reverse w-[50%] space-x-reverse space-x-16 mb-16">
                     {firstRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -79,7 +79,7 @@ export const HeroParallax = ({
                         />
                     ))}
                 </motion.div>
-                <motion.div className="flex float-end flex-row w-[45%] mb-8 space-x-8">
+                <motion.div className="flex float-end flex-row w-[50%] mb-16 space-x-16">
                     {secondRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -129,7 +129,7 @@ export const ProductCard = ({
                 y: -20,
             }}
             key={product.title}
-            className="group/product h-[380px] w-[480px] relative flex-shrink-0"
+            className="group/product h-[315px] w-[560px] relative flex-shrink-0"
         >
             <Link
                 href={product.link}
@@ -138,7 +138,7 @@ export const ProductCard = ({
                 <Image
                     src={product.thumbnail}
                     layout="fill" // Makes the image fill the container
-                    objectFit="scale-down" // Ensures the image covers the container while maintaining aspect ratio
+                    objectFit="fill" // Ensures the image covers the container while maintaining aspect ratio
                     objectPosition="left top" // Positions the image as desired
                     alt={product.title}
                 />
