@@ -9,5 +9,4 @@ const Home = () => {
   );
 };
 
-export const Page = Home; // Adlandırılmış export
-export default Home; // Varsayılan export
+export default Home; // Sadece varsayılan export
