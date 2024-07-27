@@ -1,3 +1,4 @@
+'use client'
 import frame1 from "../../public/Frame1.png";
 import frame2 from "../../public/Frame2.png";
 import frame3 from "../../public/Frame3.png";
