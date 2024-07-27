@@ -18,7 +18,7 @@ export const HeroParallax = ({
     products: {
         title: string;
         link: string;
-        thumbnail: string | any;
+        thumbnail: any;
     }[];
 }) => {
     const firstRow = products.slice(0, 2);
