@@ -58,7 +58,7 @@ export const HeroParallax = ({
     return (
         <div
             ref={ref}
-            className="h-[179vh]  overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+            className="h-[179vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
         >
             <Header />
             <motion.div
@@ -129,7 +129,7 @@ export const ProductCard = ({
                 y: -20,
             }}
             key={product.title}
-            className="group/product h-[315px] w-[560px] relative flex-shrink-0"
+            className="group/product h-[30vw] w-[50vw] max-h-[315px] max-w-[560px] relative flex-shrink-0"
         >
             <Link
                 href={product.link}
@@ -138,8 +138,8 @@ export const ProductCard = ({
                 <Image
                     src={product.thumbnail}
                     layout="fill" // Makes the image fill the container
-                    objectFit="fill" // Ensures the image covers the container while maintaining aspect ratio
-                    objectPosition="left top" // Positions the image as desired
+                    objectFit="cover" // Ensures the image covers the container while maintaining aspect ratio
+                    objectPosition="center" // Positions the image as desired
                     alt={product.title}
                 />
             </Link>
