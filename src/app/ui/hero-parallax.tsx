@@ -58,7 +58,7 @@ export const HeroParallax = ({
     return (
         <div
             ref={ref}
-            className="min-h-screen py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+            className="min-h-screen py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
         >
             <Header />
             <motion.div
@@ -99,7 +99,7 @@ export const Header = () => {
     const words = `Denizcilik sektöründeki uzmanlığımızla, Ocean&Co olarak siz değerli müşterilerimize güvenilir ve profesyonel hizmetler sunmaktan gurur duyuyoruz. Denizin engin dünyasında, ihtiyaçlarınıza uygun çözümler geliştirmek için buradayız.`;
     return (
         <>
-            <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
+            <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0" >
                 <Image width={500} height={200} src={logo} alt="ocean&co" />
                 <div className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
                     <TextGenerateEffect duration={2} filter={false} words={words} />
@@ -129,11 +129,11 @@ export const ProductCard = ({
                 y: -20,
             }}
             key={product.title}
-            className="group/product h-[30vw] w-[40vw] sm:h-[20vw] sm:w-[30vw] lg:h-[15vw] lg:w-[20vw] xl:h-[10vw] xl:w-[15vw] relative flex-shrink-0 max-h-[315px] max-w-[560px]"
+            className="group/product h-[30vw] w-[50vw] max-h-[315px] max-w-[560px] relative flex-shrink-0"
         >
             <Link
                 href={product.link}
-                className="block group-hover/product:shadow-2xl"
+                className="block group-hover/product:shadow-2xl "
             >
                 <Image
                     src={product.thumbnail}
