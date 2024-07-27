@@ -13,7 +13,7 @@ export default function home() {
     </>
   )
 }
-export const products = [
+export const products: any = [
   {
     title: "Moonbeam",
     link: "https://gomoonbeam.com",
