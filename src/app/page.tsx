@@ -5,7 +5,7 @@ import frame3 from "../../public/Frame3.png";
 import frame4 from "../../public/Frame4.png";
 import { HeroParallax } from "./ui/hero-parallax";
 
-export default function Home() {
+export const Home: React.FC<any> = (props) => {
 
   return (
     <>
