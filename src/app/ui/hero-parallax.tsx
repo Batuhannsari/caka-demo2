@@ -58,7 +58,7 @@ export const HeroParallax = ({
     return (
         <div
             ref={ref}
-            className="min-h-screen py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+            className="min-h-screen py-40 overflow-hidden antialiased relative flex flex-col items-center [perspective:1000px] [transform-style:preserve-3d]"
         >
             <Header />
             <motion.div
@@ -68,9 +68,9 @@ export const HeroParallax = ({
                     translateY,
                     opacity,
                 }}
-                className=""
+                className="w-full flex-grow flex flex-col justify-end"
             >
-                <motion.div className="flex flex-wrap justify-center space-x-16 mb-16">
+                <motion.div className="flex flex-wrap justify-center space-x-4 mb-16 w-full">
                     {firstRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -79,7 +79,7 @@ export const HeroParallax = ({
                         />
                     ))}
                 </motion.div>
-                <motion.div className="flex flex-wrap justify-center space-x-16 mb-16">
+                <motion.div className="flex flex-wrap justify-center space-x-4 mb-16 w-full">
                     {secondRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -127,7 +127,7 @@ export const ProductCard = ({
                 y: -20,
             }}
             key={product.title}
-            className="group/product relative flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+            className="group/product relative flex-shrink-0 w-[40%] max-w-xs md:max-w-[40%]"
         >
             <Link
                 href={product.link}
@@ -136,9 +136,9 @@ export const ProductCard = ({
                 <div className="relative w-full pb-[56.25%]"> {/* 16:9 aspect ratio */}
                     <Image
                         src={product.thumbnail}
-                        layout="fill" // Makes the image fill the container
-                        objectFit="cover" // Ensures the image covers the container while maintaining aspect ratio
-                        objectPosition="center" // Positions the image as desired
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition="center"
                         alt={product.title}
                     />
                 </div>
