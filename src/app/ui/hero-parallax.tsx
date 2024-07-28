@@ -32,11 +32,11 @@ export const HeroParallax = ({
     const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
     const translateX = useSpring(
-        useTransform(scrollYProgress, [0, 1], [0, 1000]),
+        useTransform(scrollYProgress, [0, 1], [0, 160]),
         springConfig
     );
     const translateXReverse = useSpring(
-        useTransform(scrollYProgress, [0, 1], [0, -1000]),
+        useTransform(scrollYProgress, [0, 1], [0, -160]),
         springConfig
     );
     const rotateX = useSpring(
@@ -58,7 +58,7 @@ export const HeroParallax = ({
     return (
         <div
             ref={ref}
-            className="min-h-screen py-40 overflow-hidden antialiased relative flex flex-col items-center [perspective:1000px] [transform-style:preserve-3d]"
+            className="min-h-screen overflow-hidden antialiased relative flex flex-col items-center [perspective:1000px] [transform-style:preserve-3d]"
         >
             <Header />
             <motion.div
@@ -70,7 +70,7 @@ export const HeroParallax = ({
                 }}
                 className="w-full flex-grow flex flex-col justify-end"
             >
-                <motion.div className="flex flex-wrap justify-center space-x-4 mb-16 w-full">
+                <motion.div className="flex flex-wrap justify-center space-x-16 mb-16 w-full">
                     {firstRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -79,7 +79,7 @@ export const HeroParallax = ({
                         />
                     ))}
                 </motion.div>
-                <motion.div className="flex flex-wrap justify-center space-x-4 mb-16 w-full">
+                <motion.div className="flex flex-wrap justify-center space-x-16 mb-16 w-full">
                     {secondRow.map((product) => (
                         <ProductCard
                             product={product}
