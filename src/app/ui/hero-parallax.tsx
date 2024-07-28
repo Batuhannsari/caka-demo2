@@ -70,7 +70,7 @@ export const HeroParallax = ({
                 }}
                 className="h-full w-full flex-grow flex flex-col justify-center"
             >
-                <motion.div className="flex flex-wrap justify-center space-x-[3%] mb-[3%] w-full">
+                <motion.div className="flex flex-wrap justify-center space-x-[3%] sm:mb-[3%] mb-0 w-full flex-col sm:flex-row items-center">
                     {firstRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -79,7 +79,7 @@ export const HeroParallax = ({
                         />
                     ))}
                 </motion.div>
-                <motion.div className="flex flex-wrap justify-center space-x-[3%] mb-[3%] w-full">
+                <motion.div className="flex flex-wrap justify-center space-x-[3%] sm:mb-[3%] mb-0 w-full flex-col sm:flex-row items-center">
                     {secondRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -127,7 +127,7 @@ export const ProductCard = ({
                 y: -20,
             }}
             key={product.title}
-            className="group/product relative flex-shrink-0 w-[30%] max-w-xs md:max-w-[30%]"
+            className="group/product relative flex-shrink-0 sm:w-[30%] w-[45%] max-w-xs md:max-w-[30%] pb-[3%] sm:pb-0"
         >
             <Link
                 href={product.link}
