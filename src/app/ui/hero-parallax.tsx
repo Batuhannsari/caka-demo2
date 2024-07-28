@@ -70,7 +70,7 @@ export const HeroParallax = ({
                 }}
                 className="h-full w-full flex-grow flex flex-col justify-end"
             >
-                <motion.div className="flex flex-wrap justify-center space-x-16 mb-16 w-full">
+                <motion.div className="flex flex-wrap justify-center space-x-[3%] mb-[3%] w-full">
                     {firstRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -79,7 +79,7 @@ export const HeroParallax = ({
                         />
                     ))}
                 </motion.div>
-                <motion.div className="flex flex-wrap justify-center space-x-16 mb-16 w-full">
+                <motion.div className="flex flex-wrap justify-center space-x-[3%] mb-[3%] w-full">
                     {secondRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -97,7 +97,7 @@ export const Header = () => {
     const words = `Denizcilik sektöründeki uzmanlığımızla, Ocean&Co olarak siz değerli müşterilerimize güvenilir ve profesyonel hizmetler sunmaktan gurur duyuyoruz. Denizin engin dünyasında, ihtiyaçlarınıza uygun çözümler geliştirmek için buradayız.`;
     return (
         <>
-            <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
+            <div className="max-w-7xl relative mx-auto py-[3%] md:py-[10%] px-[3%] w-full left-0 top-0">
                 <Image width={500} height={200} src={logo} alt="ocean&co" />
                 <div className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
                     <TextGenerateEffect duration={2} filter={false} words={words} />
@@ -127,13 +127,13 @@ export const ProductCard = ({
                 y: -20,
             }}
             key={product.title}
-            className="group/product relative flex-shrink-0 w-[35%] max-w-xs md:max-w-[35%]"
+            className="group/product relative flex-shrink-0 w-[33%] max-w-xs md:max-w-[33%]"
         >
             <Link
                 href={product.link}
                 className="block group-hover/product:shadow-2xl"
             >
-                <div className="relative w-full pb-[56.25%]"> {/* 16:9 aspect ratio */}
+                <div className="relative w-full pb-[56.23%]"> {/* 16:9 aspect ratio */}
                     <Image
                         src={product.thumbnail}
                         layout="fill"
