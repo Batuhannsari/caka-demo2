@@ -68,7 +68,7 @@ export const HeroParallax = ({
                     translateY,
                     opacity,
                 }}
-                className="h-full w-full flex-grow flex flex-col justify-end"
+                className="h-full w-full flex-grow flex flex-col justify-center"
             >
                 <motion.div className="flex flex-wrap justify-center space-x-[3%] mb-[3%] w-full">
                     {firstRow.map((product) => (
