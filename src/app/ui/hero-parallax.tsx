@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../../public/logo.png";
 import TextGenerateEffect from "./text-generate-effect";
 
@@ -21,6 +21,14 @@ export const HeroParallax = ({
         thumbnail: any;
     }[];
 }) => {
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setIsClient(true);
+        }
+    }, []);
+
     const firstRow = products.slice(0, 2);
     const secondRow = products.slice(2, 4);
     const ref = React.useRef(null);
@@ -32,11 +40,11 @@ export const HeroParallax = ({
     const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
     const translateX = useSpring(
-        useTransform(scrollYProgress, [0, 1], [0, window.innerWidth < 640 ? 0 : 160]),
+        useTransform(scrollYProgress, [0, 1], [0, isClient && window.innerWidth < 640 ? 0 : 160]),
         springConfig
     );
     const translateXReverse = useSpring(
-        useTransform(scrollYProgress, [0, 1], [0, window.innerWidth < 640 ? 0 : -160]),
+        useTransform(scrollYProgress, [0, 1], [0, isClient && window.innerWidth < 640 ? 0 : -160]),
         springConfig
     );
     const rotateX = useSpring(
@@ -55,6 +63,7 @@ export const HeroParallax = ({
         useTransform(scrollYProgress, [0, 0.2], [-500, -50]),
         springConfig
     );
+
     return (
         <div
             ref={ref}
