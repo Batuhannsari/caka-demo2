@@ -122,28 +122,26 @@ export const ProductCard = ({
         <motion.div
             style={{
                 x: translate,
-                height: 'calc(100vh / 3)',
-                width: 'calc((100vh / 3) * (16 / 9))', // maintaining 16:9 aspect ratio
-                maxHeight: '315px',
-                maxWidth: '560px'
             }}
             whileHover={{
                 y: -20,
             }}
             key={product.title}
-            className="group/product relative flex-shrink-0"
+            className="group/product relative flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
         >
             <Link
                 href={product.link}
                 className="block group-hover/product:shadow-2xl"
             >
-                <Image
-                    src={product.thumbnail}
-                    layout="fill" // Makes the image fill the container
-                    objectFit="cover" // Ensures the image covers the container while maintaining aspect ratio
-                    objectPosition="center" // Positions the image as desired
-                    alt={product.title}
-                />
+                <div className="relative w-full pb-[56.25%]"> {/* 16:9 aspect ratio */}
+                    <Image
+                        src={product.thumbnail}
+                        layout="fill" // Makes the image fill the container
+                        objectFit="cover" // Ensures the image covers the container while maintaining aspect ratio
+                        objectPosition="center" // Positions the image as desired
+                        alt={product.title}
+                    />
+                </div>
             </Link>
             <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
             <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
