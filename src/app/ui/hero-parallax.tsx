@@ -136,7 +136,7 @@ export const ProductCard = ({
                 y: -20,
             }}
             key={product.title}
-            className="group/product relative flex-shrink-0 sm:w-[30%] w-[45%] max-w-xs md:max-w-[30%] pb-[3%] sm:pb-0"
+            className="group/product relative flex-shrink-0 sm:w-[30%] w-[65%] max-w-xs md:max-w-[30%] pb-[3%] sm:pb-0"
         >
             <Link
                 href={product.link}
